@@ -1,0 +1,33 @@
+package com.company.theory;
+
+import java.util.Hashtable;
+import java.util.Map;
+
+public class Single_List {
+
+    class Node{
+        int data;
+        Node next;
+
+        Node(int data){
+            this.data = data;
+        }
+    }
+
+
+
+    public static void main(String[] args) {
+        Single_List.Node first  =  new Single_List().new Node(1);
+        Single_List.Node second =  new Single_List().new Node(2);
+        Single_List.Node third  =  new Single_List().new Node(3);
+        Single_List.Node fourth =  new Single_List().new Node(4);
+
+        first.next = third;
+        third.next = fourth;
+
+        while (first != null) {
+            System.out.print(first.data+" -> ");
+            first = first.next;
+        }
+    }
+}
